@@ -27,23 +27,23 @@ The UCI Heart Disease dataset contains records from patients who went through ca
 ## **Data quality check**
 ### Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
 
-**Target distribution**
-## Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
+## **Target distribution**
+### Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
 
-**Univariate analysis**
-## Histograms for all continuous features to understand distributions. Checking for skew, outliers, whether anything looks unusual before comparing across groups.
+## **Univariate analysis**
+### Histograms for all continuous features to understand distributions. Checking for skew, outliers, whether anything looks unusual before comparing across groups.
 
-**Bivariate analysis**
-## Side-by-side box plots comparing feature distributions between disease and no-disease groups. This is where you start to see which features actually separate the two groups.
+## **Bivariate analysis**
+### Side-by-side box plots comparing feature distributions between disease and no-disease groups. This is where you start to see which features actually separate the two groups.
 
-**Correlation heatmap**
-## Pearson correlations between all features visualised as a colour matrix. Useful for spotting which features move together and which correlate most with the outcome.
+## **Correlation heatmap**
+### Pearson correlations between all features visualised as a colour matrix. Useful for spotting which features move together and which correlate most with the outcome.
 
-**Categorical features**
-## Bar charts showing disease rates by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss completely.
+## **Categorical features**
+### Bar charts showing disease rates by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss completely.
 
-**Pairplot**
-## Scatter plots for every feature combination coloured by disease status. The most informative single visualisation in the whole project.
+## **Pairplot**
+### Scatter plots for every feature combination coloured by disease status. The most informative single visualisation in the whole project.
 
 ---
 
