@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-# ❤️ Exploratory Data Analysis — Heart Disease Dataset
-=======
-# Heart Disease -> Exploratory Data Analysis
->>>>>>> bb959ab704609d95323fb50096021ea5eda6f012
+# Heart Disease — Exploratory Data Analysis
 
-Exploratory data analysis is where every good machine learning project begins. Before writing a single line of modelling code, understanding the data — its structure, quirks, distributions, and hidden relationships — is what separates models that generalise from models that fail silently. This project applies the full EDA toolkit to a real clinical dataset, building intuition for how medical data behaves and what signals are worth pursuing.
+Before building any model, you need to actually understand what you're working with. This project is about that step. EDA gets skipped or rushed in most tutorials and it shows up later as models that fail in confusing ways. I wanted to do it properly on a real clinical dataset and build the habit of knowing my data before touching a model.
 
 ---
 
-## 📌 Project Snapshot
+## Project Snapshot
 
 | | |
 |---|---|
@@ -16,120 +12,69 @@ Exploratory data analysis is where every good machine learning project begins. B
 | **Records** | 1,025 patients |
 | **Features** | 13 clinical and diagnostic attributes |
 | **Target** | Presence of heart disease (binary) |
-| **Libraries** | `pandas` · `matplotlib` · `seaborn` |
+| **Libraries** | `pandas`, `matplotlib`, `seaborn` |
 
 ---
 
-## 🗂️ The Dataset
+## The Dataset
 
-The UCI Heart Disease dataset contains records from patients who underwent cardiac evaluation. Each record captures a mix of demographic, physiological, and diagnostic measurements collected before a formal diagnosis was made. The dataset is widely used as a benchmark for medical classification and has been studied extensively in the clinical ML literature.
-
-**Feature breakdown:**
-- **Demographic:** age, sex
-- **Physiological:** resting blood pressure, serum cholesterol, fasting blood sugar, maximum heart rate
-- **Diagnostic:** chest pain type, resting ECG results, exercise-induced angina, ST depression, slope of ST segment, number of major vessels coloured by fluoroscopy, thalassemia type
+The UCI Heart Disease dataset contains records from patients who went through cardiac evaluation. Each record has a mix of demographic, physiological, and diagnostic measurements taken before a formal diagnosis. Features include age, sex, resting blood pressure, serum cholesterol, fasting blood sugar, maximum heart rate, chest pain type, ECG results, exercise-induced angina, ST depression, number of major vessels coloured by fluoroscopy, and thalassemia type.
 
 ---
 
-## 📊 Analysis Performed
+## What I Did
 
-<<<<<<< HEAD
-**1. Data Quality Assessment**
-Checked for missing values, impossible entries, and data type issues. Verified that all 13 features are present and complete across all 1,025 records.
+**Data quality check**  
+Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
 
-**2. Target Distribution**
-Plotted the balance between disease and no-disease classes. A balanced dataset (~50/50) means standard accuracy is a valid starting metric — unlike many real-world medical datasets where imbalance is severe.
+**Target distribution**  
+Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
 
-**3. Univariate Analysis**
-Built histograms for all continuous features (age, cholesterol, blood pressure, max heart rate, ST depression) to understand their distributions — checking for skewness, outliers, and whether the data is approximately normal or requires transformation.
+**Univariate analysis**  
+Histograms for all continuous features to understand distributions. Checking for skew, outliers, whether anything looks unusual before comparing across groups.
 
-**4. Bivariate Analysis**
-Compared feature distributions between disease and no-disease groups using side-by-side box plots. This surfaces which features discriminate most clearly between the two groups before any modelling.
+**Bivariate analysis**  
+Side-by-side box plots comparing feature distributions between disease and no-disease groups. This is where you start to see which features actually separate the two groups.
 
-**5. Correlation Heatmap**
-Computed Pearson correlations between all features and visualised as a colour-coded matrix. Revealed which features move together (potential multicollinearity) and which correlate most strongly with the target outcome.
+**Correlation heatmap**  
+Pearson correlations between all features visualised as a colour matrix. Useful for spotting which features move together and which correlate most with the outcome.
 
-**6. Categorical Feature Analysis**
-Bar charts showing disease rates broken down by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss entirely.
+**Categorical features**  
+Bar charts showing disease rates by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss completely.
 
-**7. Pairplot**
-A grid of scatter plots for every feature combination, coloured by disease status. The most informative single visualisation — immediately shows which feature pairs produce visible class separation.
-=======
-## **Data quality check**
-### Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
-
-## **Target distribution**
-### Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
-
-## **Univariate analysis**
-### Histograms for all continuous features to understand distributions. Checking for skew, outliers, whether anything looks unusual before comparing across groups.
-
-## **Bivariate analysis**
-### Side-by-side box plots comparing feature distributions between disease and no-disease groups. This is where you start to see which features actually separate the two groups.
-
-## **Correlation heatmap**
-### Pearson correlations between all features visualised as a colour matrix. Useful for spotting which features move together and which correlate most with the outcome.
-
-## **Categorical features**
-### Bar charts showing disease rates by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss completely.
-
-## **Pairplot**
-### Scatter plots for every feature combination coloured by disease status. The most informative single visualisation in the whole project.
->>>>>>> bb959ab704609d95323fb50096021ea5eda6f012
+**Pairplot**  
+Scatter plots for every feature combination coloured by disease status. The most informative single visualisation in the whole project.
 
 ---
 
-## 📈 Visualisations Generated
+## Visualisations
 
-| File | Description |
-|------|-------------|
-| `plot1_target_distribution.png` | Class balance — disease vs no disease |
-| `plot2_age_distribution.png` | Age histograms split by outcome |
+| File | What it shows |
+|------|---------------|
+| `plot1_target_distribution.png` | Class balance |
+| `plot2_age_distribution.png` | Age split by outcome |
 | `plot3_gender_distribution.png` | Disease rates by sex |
-| `plot4_cholesterol_boxplot.png` | Cholesterol spread across outcome groups |
+| `plot4_cholesterol_boxplot.png` | Cholesterol across outcome groups |
 | `plot5_heartrate_boxplot.png` | Max heart rate by disease status |
 | `plot6_correlation_heatmap.png` | Full feature correlation matrix |
 | `plot7_chestpain_distribution.png` | Disease rate by chest pain type |
-| `plot8_pairplot.png` | Multivariate scatter grid coloured by outcome |
+| `plot8_pairplot.png` | Multivariate scatter grid |
 
 ---
 
-## 🔍 Key Findings
+## Key Findings
 
-**Strongest predictors** (by correlation and visual separation):
-- `ca` — number of major vessels coloured by fluoroscopy. Directly measures arterial blockage. Strongest single predictor.
-- `cp` — chest pain type. Counterintuitively, asymptomatic patients (type 0) show the highest disease rates — severe disease often presents silently.
-- `thalach` — maximum heart rate. Patients *with* disease have *lower* maximum heart rates. A diseased heart cannot sustain high rates under exertion.
+`ca` (number of major vessels) turned out to be the strongest predictor. It directly measures arterial blockage so that makes sense clinically.
 
-**Weaker than expected:**
-- `chol` — serum cholesterol. Surprisingly weak predictor on its own. Total cholesterol is less clinically informative than LDL/HDL ratio, which is absent from this dataset. A good reminder that feature interpretation requires domain knowledge.
+`thalach` (maximum heart rate) was interesting. Patients with disease actually have lower maximum heart rates. A diseased heart cannot sustain high rates under exertion, so the direction of the relationship is counterintuitive until you think about the biology.
 
-**Class balance:**
-- 526 disease positive (~51%), 499 disease negative (~49%). Well balanced — accuracy is a reasonable metric here.
+`cp` (chest pain type) was surprising. Asymptomatic patients showed the highest disease rates. Severe disease often presents silently, which is a well-known clinical problem.
+
+`chol` (cholesterol) was weaker than expected. Total cholesterol is less clinically informative than LDL/HDL ratio, which is not in this dataset. A good reminder that you need domain knowledge to interpret feature importance correctly.
 
 ---
 
-## 📂 Repository Structure
-
-```
-heart-disease-eda/
-├── heart.csv
-├── heart_eda.py
-├── plot1_target_distribution.png
-├── plot2_age_distribution.png
-├── plot3_gender_distribution.png
-├── plot4_cholesterol_boxplot.png
-├── plot5_heartrate_boxplot.png
-├── plot6_correlation_heatmap.png
-├── plot7_chestpain_distribution.png
-├── plot8_pairplot.png
-└── README.md
-```
-
----
-
-## ⚙️ Setup
-
+## Setup
 ```bash
 git clone https://github.com/Shaflovescoffee19/heart-disease-eda.git
 cd heart-disease-eda
@@ -139,23 +84,21 @@ python3 heart_eda.py
 
 ---
 
-## 📚 Skills Developed
+## What I Learned
 
-- Loading, inspecting, and profiling real-world tabular datasets with `pandas`
-- Reading and interpreting statistical summaries — mean, median, std, quartiles, and what each tells you
-- Building histograms, box plots, count plots, heatmaps, and pairplots with `seaborn` and `matplotlib`
-- Understanding Pearson correlation — what it measures, what it misses, and why visualisation cannot be replaced by summary statistics alone
-- Translating data observations into domain-grounded hypotheses about which features drive outcomes
+- How to properly profile a dataset before modelling
+- Reading statistical summaries and knowing what each one tells you and what it misses
+- Building histograms, box plots, heatmaps, and pairplots and actually interpreting them
+- Why visualisation cannot be replaced by summary statistics alone
+- How domain knowledge changes the way you read feature importance
 
 ---
 
-## 🗺️ Learning Roadmap
-
-**Project 1 of 10** — a structured series building from data exploration through to advanced ML techniques.
+## Part of a 10-Project Series
 
 | # | Project | Focus |
 |---|---------|-------|
-| 1 | **Heart Disease EDA** ← | Exploratory analysis, visualisation |
+| 1 | **Heart Disease EDA** | Exploratory analysis, visualisation |
 | 2 | Diabetes Data Cleaning | Missing data, outliers, feature engineering |
 | 3 | Cancer Risk Classification | Supervised learning, model comparison |
 | 4 | Survival Analysis | Time-to-event modelling, Cox regression |
