@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # ❤️ Exploratory Data Analysis — Heart Disease Dataset
+=======
+# Heart Disease -> Exploratory Data Analysis
+>>>>>>> bb959ab704609d95323fb50096021ea5eda6f012
 
 Exploratory data analysis is where every good machine learning project begins. Before writing a single line of modelling code, understanding the data — its structure, quirks, distributions, and hidden relationships — is what separates models that generalise from models that fail silently. This project applies the full EDA toolkit to a real clinical dataset, building intuition for how medical data behaves and what signals are worth pursuing.
 
@@ -29,6 +33,7 @@ The UCI Heart Disease dataset contains records from patients who underwent cardi
 
 ## 📊 Analysis Performed
 
+<<<<<<< HEAD
 **1. Data Quality Assessment**
 Checked for missing values, impossible entries, and data type issues. Verified that all 13 features are present and complete across all 1,025 records.
 
@@ -49,6 +54,28 @@ Bar charts showing disease rates broken down by chest pain type, sex, fasting bl
 
 **7. Pairplot**
 A grid of scatter plots for every feature combination, coloured by disease status. The most informative single visualisation — immediately shows which feature pairs produce visible class separation.
+=======
+## **Data quality check**
+### Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
+
+## **Target distribution**
+### Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
+
+## **Univariate analysis**
+### Histograms for all continuous features to understand distributions. Checking for skew, outliers, whether anything looks unusual before comparing across groups.
+
+## **Bivariate analysis**
+### Side-by-side box plots comparing feature distributions between disease and no-disease groups. This is where you start to see which features actually separate the two groups.
+
+## **Correlation heatmap**
+### Pearson correlations between all features visualised as a colour matrix. Useful for spotting which features move together and which correlate most with the outcome.
+
+## **Categorical features**
+### Bar charts showing disease rates by chest pain type, sex, fasting blood sugar, and ECG results. Categorical features can be highly predictive in ways that continuous correlations miss completely.
+
+## **Pairplot**
+### Scatter plots for every feature combination coloured by disease status. The most informative single visualisation in the whole project.
+>>>>>>> bb959ab704609d95323fb50096021ea5eda6f012
 
 ---
 
