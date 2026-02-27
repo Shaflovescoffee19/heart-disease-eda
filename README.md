@@ -1,4 +1,4 @@
-# Heart Disease — Exploratory Data Analysis
+# Heart Disease -> Exploratory Data Analysis
 
 Before building any model, you need to actually understand what you're working with. This project is about that step. EDA gets skipped or rushed in most tutorials and it shows up later as models that fail in confusing ways. I wanted to do it properly on a real clinical dataset and build the habit of knowing my data before touching a model.
 
