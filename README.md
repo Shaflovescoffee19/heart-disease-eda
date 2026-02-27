@@ -24,8 +24,8 @@ The UCI Heart Disease dataset contains records from patients who went through ca
 
 ## What I Did
 
-**Data quality check**
-## Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
+## **Data quality check**
+# Checked for missing values, impossible entries, and data type issues. All 13 features are present and complete across all 1,025 records, which is unusual for a medical dataset.
 
 **Target distribution**
 ## Plotted the class balance. About 50/50 between disease and no disease, which means accuracy is actually a valid metric here unlike most real-world medical datasets.
